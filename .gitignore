@@ -1,0 +1,12 @@
+.build/
+.swiftpm/
+build/
+dist/
+.verification-tools/
+__pycache__/
+*.xcuserstate
+xcuserdata/
+.DS_Store
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm

@@ -1,0 +1,22 @@
+name: Native macOS verification
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  native:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify schema, catalog and SQL transactions
+        run: |
+          python3 scripts/generate_seed.py
+          python3 scripts/verify_persistence_sql.py
+          python3 scripts/verify_commerce_sql.py
+          python3 scripts/verify_project.py
+          python3 scripts/verify_monterey_compatibility.py
+      - name: Test and package the native app with SwiftPM
+        run: bash scripts/build-macos.sh
+      - name: Preserve testable app
+        run: ditto -c -k --keepParent 'build/The Hungry Spot.app' HungrySpot-macOS.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: HungrySpot-macOS
+          path: HungrySpot-macOS.zip

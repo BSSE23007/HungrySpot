@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:HungrySpot}",
+            "name": "Debug HungrySpot",
+            "target": "HungrySpot",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug HungrySpot"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:HungrySpot}",
+            "name": "Release HungrySpot",
+            "target": "HungrySpot",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release HungrySpot"
+        }
+    ]
+}

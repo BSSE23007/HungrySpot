@@ -1,0 +1,56 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+		B282C8BFE2050766E306FE98 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/HungrySpot/AppState.swift"; sourceTree = "<group>"; };
+		9BBA932878CF1705C4CD9B6F = { isa = PBXBuildFile; fileRef = B282C8BFE2050766E306FE98; };
+		4754D40673B98950E8C2DF71 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/HungrySpot/HungrySpotApp.swift"; sourceTree = "<group>"; };
+		932521BDC58EE7940BE9E716 = { isa = PBXBuildFile; fileRef = 4754D40673B98950E8C2DF71; };
+		0311F469997F85347F64F5D8 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/HungrySpot/Infrastructure/AppPaths.swift"; sourceTree = "<group>"; };
+		02B7BA5EFC47DED5F59CEBF3 = { isa = PBXBuildFile; fileRef = 0311F469997F85347F64F5D8; };
+		F8F7EE9E71CEE93E88DB0442 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/HungrySpot/Infrastructure/BackupService.swift"; sourceTree = "<group>"; };
+		83E38D5F497C7AC45128E9F4 = { isa = PBXBuildFile; fileRef = F8F7EE9E71CEE93E88DB0442; };
+		E8BDC44FD512E44226831E29 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/HungrySpot/Infrastructure/ImageStorageService.swift"; sourceTree = "<group>"; };
+		1CD72C120107C5EC9DBE7E9D = { isa = PBXBuildFile; fileRef = E8BDC44FD512E44226831E29; };
+		354A10F1FBC3AC315484C4FA = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/HungrySpot/Infrastructure/PrinterService.swift"; sourceTree = "<group>"; };
+		B09353500356B84AC632F080 = { isa = PBXBuildFile; fileRef = 354A10F1FBC3AC315484C4FA; };
+		26E719780CFC4302AAA8A6F7 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/HungrySpot/Views/CatalogViews.swift"; sourceTree = "<group>"; };
+		6FAB0F64021015E2BD02561D = { isa = PBXBuildFile; fileRef = 26E719780CFC4302AAA8A6F7; };
+		FD81F03B7EA52496DE9BC00E = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/HungrySpot/Views/DealsView.swift"; sourceTree = "<group>"; };
+		789FB180CFA24F1B4436B90B = { isa = PBXBuildFile; fileRef = FD81F03B7EA52496DE9BC00E; };
+		A2FF6BC6358590B7169C443A = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/HungrySpot/Views/OrdersView.swift"; sourceTree = "<group>"; };
+		A39E50D7ED746DD7BB27773B = { isa = PBXBuildFile; fileRef = A2FF6BC6358590B7169C443A; };
+		93897DC775087745D9CF58C8 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/HungrySpot/Views/POSView.swift"; sourceTree = "<group>"; };
+		73CCF6C2582143925E7FDAE8 = { isa = PBXBuildFile; fileRef = 93897DC775087745D9CF58C8; };
+		C9BBC2300D18277F5A52B228 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/HungrySpot/Views/ReportingViews.swift"; sourceTree = "<group>"; };
+		0170486AC65C6FFC0449CA6D = { isa = PBXBuildFile; fileRef = C9BBC2300D18277F5A52B228; };
+		A20D1393C98FD70ADBAC8458 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/HungrySpot/Views/RootView.swift"; sourceTree = "<group>"; };
+		6EE0C6E715B785C586148787 = { isa = PBXBuildFile; fileRef = A20D1393C98FD70ADBAC8458; };
+		D4E3E22F7984E9E2E5284D64 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/HungrySpot/Views/SettingsView.swift"; sourceTree = "<group>"; };
+		51C66999C747015BFC90C810 = { isa = PBXBuildFile; fileRef = D4E3E22F7984E9E2E5284D64; };
+		DEEBD6F5BF7DF063A710A211 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/HungrySpot/Views/SharedViews.swift"; sourceTree = "<group>"; };
+		43D398393D15BB8082DC3FF5 = { isa = PBXBuildFile; fileRef = DEEBD6F5BF7DF063A710A211; };
+		E66CB813F4B75CC31B557017 = { isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Sources/HungrySpot/Resources/Branding.jpg"; sourceTree = "<group>"; };
+		D19995B5E78F161A60959FDB = { isa = PBXBuildFile; fileRef = E66CB813F4B75CC31B557017; };
+		A8792157CB4F27FB949C035F = { isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Hungry Spot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A3E27B8CA818264D75C8D81 = { isa = PBXGroup; children = (A8792157CB4F27FB949C035F,); name = Products; sourceTree = "<group>"; };
+		AD936FCBED631FA67E05C3EA = { isa = PBXGroup; children = (B282C8BFE2050766E306FE98,4754D40673B98950E8C2DF71,0311F469997F85347F64F5D8,F8F7EE9E71CEE93E88DB0442,E8BDC44FD512E44226831E29,354A10F1FBC3AC315484C4FA,26E719780CFC4302AAA8A6F7,FD81F03B7EA52496DE9BC00E,A2FF6BC6358590B7169C443A,93897DC775087745D9CF58C8,C9BBC2300D18277F5A52B228,A20D1393C98FD70ADBAC8458,D4E3E22F7984E9E2E5284D64,DEEBD6F5BF7DF063A710A211,E66CB813F4B75CC31B557017,0A3E27B8CA818264D75C8D81,); sourceTree = "<group>"; };
+		BC4A71180870F7945155FBB0 = { isa = XCLocalSwiftPackageReference; relativePath = .; };
+		0D45F5FD462B8C70BFFB1002 = { isa = XCSwiftPackageProductDependency; package = BC4A71180870F7945155FBB0; productName = HungrySpotCore; };
+		91596F6079D535D734C1642A = { isa = PBXBuildFile; productRef = 0D45F5FD462B8C70BFFB1002; };
+		878A52FC5FF6A57D50B7B870 = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (9BBA932878CF1705C4CD9B6F,932521BDC58EE7940BE9E716,02B7BA5EFC47DED5F59CEBF3,83E38D5F497C7AC45128E9F4,1CD72C120107C5EC9DBE7E9D,B09353500356B84AC632F080,6FAB0F64021015E2BD02561D,789FB180CFA24F1B4436B90B,A39E50D7ED746DD7BB27773B,73CCF6C2582143925E7FDAE8,0170486AC65C6FFC0449CA6D,6EE0C6E715B785C586148787,51C66999C747015BFC90C810,43D398393D15BB8082DC3FF5,); runOnlyForDeploymentPostprocessing = 0; };
+		41D311A605520FC7B8B9A980 = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (D19995B5E78F161A60959FDB,); runOnlyForDeploymentPostprocessing = 0; };
+		E2AA269EB967A8853A258BFA = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (91596F6079D535D734C1642A,); runOnlyForDeploymentPostprocessing = 0; };
+		73EBF6644258C120893E685D = { isa = XCBuildConfiguration; buildSettings = { CLANG_ENABLE_MODULES = YES; MACOSX_DEPLOYMENT_TARGET = 12.0; SDKROOT = macosx; SWIFT_VERSION = 5.0; }; name = Debug; };
+		6C7EFF6369083C8E1F2B1994 = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_STYLE = Automatic; ENABLE_HARDENED_RUNTIME = YES; INFOPLIST_FILE = Configuration/Info.plist; PRODUCT_BUNDLE_IDENTIFIER = com.thehungryspot.pos; PRODUCT_NAME = "The Hungry Spot"; SWIFT_VERSION = 5.0; MACOSX_DEPLOYMENT_TARGET = 12.0; GENERATE_INFOPLIST_FILE = NO; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks"; OTHER_LDFLAGS = "$(inherited) -lsqlite3"; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; ENABLE_TESTABILITY = YES; SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG; }; name = Debug; };
+		0B0C687DF8B6B8DC790B519C = { isa = XCBuildConfiguration; buildSettings = { CLANG_ENABLE_MODULES = YES; MACOSX_DEPLOYMENT_TARGET = 12.0; SDKROOT = macosx; SWIFT_VERSION = 5.0; }; name = Release; };
+		DD75E2CB1C510A828AC72D96 = { isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_STYLE = Automatic; ENABLE_HARDENED_RUNTIME = YES; INFOPLIST_FILE = Configuration/Info.plist; PRODUCT_BUNDLE_IDENTIFIER = com.thehungryspot.pos; PRODUCT_NAME = "The Hungry Spot"; SWIFT_VERSION = 5.0; MACOSX_DEPLOYMENT_TARGET = 12.0; GENERATE_INFOPLIST_FILE = NO; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks"; OTHER_LDFLAGS = "$(inherited) -lsqlite3"; SWIFT_COMPILATION_MODE = wholemodule; SWIFT_OPTIMIZATION_LEVEL = "-O"; }; name = Release; };
+		76F8DEC3DFE0BDB465198890 = { isa = XCConfigurationList; buildConfigurations = (73EBF6644258C120893E685D,0B0C687DF8B6B8DC790B519C,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		1B672BF3DA427763BF644BE3 = { isa = XCConfigurationList; buildConfigurations = (6C7EFF6369083C8E1F2B1994,DD75E2CB1C510A828AC72D96,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		34A04005BCAF206EEC990BD9 = { isa = PBXNativeTarget; buildConfigurationList = 1B672BF3DA427763BF644BE3; buildPhases = (878A52FC5FF6A57D50B7B870,E2AA269EB967A8853A258BFA,41D311A605520FC7B8B9A980,); buildRules = (); dependencies = (); name = HungrySpot; packageProductDependencies = (0D45F5FD462B8C70BFFB1002,); productName = "The Hungry Spot"; productReference = A8792157CB4F27FB949C035F; productType = "com.apple.product-type.application"; };
+		244210E48437B6556980A702 = { isa = PBXProject; attributes = { BuildIndependentTargetsInParallel = YES; LastUpgradeCheck = 1420; }; buildConfigurationList = 76F8DEC3DFE0BDB465198890; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en,Base,); mainGroup = AD936FCBED631FA67E05C3EA; packageReferences = (BC4A71180870F7945155FBB0,); productRefGroup = 0A3E27B8CA818264D75C8D81; projectDirPath = ""; projectRoot = ""; targets = (34A04005BCAF206EEC990BD9,); };
+	};
+	rootObject = 244210E48437B6556980A702;
+}

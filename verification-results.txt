@@ -1,0 +1,84 @@
+Verification of modified owner upload, 2026-10-08
+Host: Windows
+These portable checks do not compile or execute Swift.
+
+verify_persistence_sql.py exit=0
+SQLite 3.53.1; 48 literal service statements checked. These are SQL checks, not Swift execution.
+
+test_all_literal_catalog_auth_audit_queries_prepare_against_schema (__main__.PersistenceSQLTests.test_all_literal_catalog_auth_audit_queries_prepare_against_schema) ... ok
+test_availability_update_changes_only_its_flag_and_rolls_back_with_audit (__main__.PersistenceSQLTests.test_availability_update_changes_only_its_flag_and_rolls_back_with_audit) ... ok
+test_catalog_counts_references_and_no_default_credentials (__main__.PersistenceSQLTests.test_catalog_counts_references_and_no_default_credentials) ... ok
+test_catalog_update_rolls_back_when_audit_cannot_be_written (__main__.PersistenceSQLTests.test_catalog_update_rolls_back_when_audit_cannot_be_written) ... ok
+test_first_run_is_atomic_and_future_schema_is_not_modified (__main__.PersistenceSQLTests.test_first_run_is_atomic_and_future_schema_is_not_modified) ... ok
+test_nested_savepoints_preserve_outer_changes (__main__.PersistenceSQLTests.test_nested_savepoints_preserve_outer_changes) ... ok
+test_online_backup_includes_wal_commits_without_readonly_sidecars (__main__.PersistenceSQLTests.test_online_backup_includes_wal_commits_without_readonly_sidecars) ... ok
+test_product_variant_crud_money_and_safe_deletion_constraints (__main__.PersistenceSQLTests.test_product_variant_crud_money_and_safe_deletion_constraints) ... ok
+test_seed_marker_preserves_price_changes_and_deleted_products (__main__.PersistenceSQLTests.test_seed_marker_preserves_price_changes_and_deleted_products) ... ok
+test_settings_upsert_roundtrip_and_parameterized_literal_search (__main__.PersistenceSQLTests.test_settings_upsert_roundtrip_and_parameterized_literal_search) ... ok
+test_username_uniqueness_hash_blobs_and_role_constraints (__main__.PersistenceSQLTests.test_username_uniqueness_hash_blobs_and_role_constraints) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.123s
+
+OK
+
+
+verify_commerce_sql.py exit=0
+Checking 19 Swift SQL statements against bundled SQLite schema and catalog.
+Scope: SQL persistence/integrity only; native Swift compilation and XCTest still require macOS.
+
+test_day_boundaries_history_and_pagination_include_paid_legacy_orders (__main__.CommerceSQLTests.test_day_boundaries_history_and_pagination_include_paid_legacy_orders) ... ok
+test_duplicate_request_cannot_create_a_second_order (__main__.CommerceSQLTests.test_duplicate_request_cannot_create_a_second_order) ... ok
+test_dynamic_order_search_is_literal_and_pagination_is_stable (__main__.CommerceSQLTests.test_dynamic_order_search_is_literal_and_pagination_is_stable) ... ok
+test_every_static_service_sql_prepares_against_current_schema (__main__.CommerceSQLTests.test_every_static_service_sql_prepares_against_current_schema) ... ok
+test_expense_range_and_audit_rollback (__main__.CommerceSQLTests.test_expense_range_and_audit_rollback) ... ok
+test_item_failure_rolls_back_order_and_all_snapshots (__main__.CommerceSQLTests.test_item_failure_rolls_back_order_and_all_snapshots) ... ok
+test_order_round_trip_and_snapshot_prices_names_options (__main__.CommerceSQLTests.test_order_round_trip_and_snapshot_prices_names_options) ... ok
+test_paid_zero_and_delivery_discount_totals_are_retained (__main__.CommerceSQLTests.test_paid_zero_and_delivery_discount_totals_are_retained) ... ok
+test_payment_completion_and_both_audits_commit_together (__main__.CommerceSQLTests.test_payment_completion_and_both_audits_commit_together) ... ok
+test_payment_unique_and_audit_failure_rolls_back_payment_and_status (__main__.CommerceSQLTests.test_payment_unique_and_audit_failure_rolls_back_payment_and_status) ... ok
+test_report_items_preserve_historical_categories_and_names (__main__.CommerceSQLTests.test_report_items_preserve_historical_categories_and_names) ... ok
+test_report_uses_payment_dates_half_open_range_and_completed_sales (__main__.CommerceSQLTests.test_report_uses_payment_dates_half_open_range_and_completed_sales) ... ok
+test_type_payment_date_and_search_filters_compose (__main__.CommerceSQLTests.test_type_payment_date_and_search_filters_compose) ... ok
+test_used_products_and_variants_cannot_be_deleted (__main__.CommerceSQLTests.test_used_products_and_variants_cannot_be_deleted) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.146s
+
+OK
+
+
+verify_project.py exit=0
+Project structure passed: 14 app files, 26 production Swift files, 106 supplied XCTest cases, resources/plist/scheme/object references checked.
+This does not type-check Swift or compile an app. Run bash scripts/build-macos.sh on macOS.
+
+
+
+verify_monterey_compatibility.py exit=0
+Monterey static gate passed: 26 production Swift files, deployment 12.0, tools 5.7, one SwiftPM build job, manual app bundle.
+Known-API scan only; not a full SDK availability check or a native compile/run.
+
+
+
+verify_swift_syntax.py exit=0
+Swift syntax parse: 35 files, 0 grammar errors. This is not a native compiler or type check.
+
+
+
+Preserved byte-for-byte from uploaded ZIP:
+Package.swift
+Sources/HungrySpot/Infrastructure/AppPaths.swift
+Sources/HungrySpot/Infrastructure/PrinterService.swift
+Sources/HungrySpot/Infrastructure/BackupService.swift
+Sources/HungrySpotCore/Persistence/Database.swift
+Sources/HungrySpotCore/Services/ReportingService.swift
+Sources/HungrySpotCore/Services/PricingService.swift
+Sources/HungrySpotCore/Resources/001_schema.sql
+Sources/HungrySpotCore/Resources/seed.sql
+Native XCTest methods: 74 existing preserved; 32 added; 106 total. NOT EXECUTED on Windows.
+UTF-8 source checked for introduced middle-dot/multiplication mojibake.
+
+Shell syntax check: bash -n for build-macos.sh and package-dmg.sh exited0.
+Native build invocation: bash scripts/build-macos.sh
+Output: Build requires macOS.
+Exit:1 at platform guard; no native tests/build executed.
