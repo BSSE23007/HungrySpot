@@ -10,3 +10,14 @@ xcuserdata/
 *.sqlite3
 *.sqlite3-wal
 *.sqlite3-shm
+
+# macOS archive and Finder metadata
+__MACOSX/
+._*
+.AppleDouble
+.LSOverride
+
+# Xcode generated files
+DerivedData/
+*.xcarchive/
+*.dSYM/
